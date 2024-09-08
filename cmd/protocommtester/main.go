@@ -1,13 +1,13 @@
 package main
 
 import (
-	"net/http"
 	"log"
+	"net/http"
 )
 
 func main() {
 	fs := http.FileServer(http.Dir("templates/"))
-  http.Handle("/", fs)
+	http.Handle("/", fs)
 	log.Println("Server started at localhost:9090")
 	err := http.ListenAndServe(":9090", nil)
 	if err != nil {
