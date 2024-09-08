@@ -18,3 +18,4 @@ jobs:
           if [ -n "$(gofmt -l .)" ]; then
             echo "Go code is not properly formatted."
             exit 1
+          fi
